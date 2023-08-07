@@ -1,0 +1,183 @@
+.ar-wrap {
+    width: 100%;
+    .num {
+        font-family: 'AritaDotum', 'Noto Sans KR', 'sanserif';
+        font-weight: bolder;
+    }
+    &::after {
+        content: '';
+        width: 100%;
+        height: 5.375rem;
+        display: block;
+    }
+    &.grey {
+        background-color: $back-color;
+        min-height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        &::after {
+            background-color: $back-color;
+        }
+    }
+    .layout {
+        padding: 0 1rem;
+    }
+    &.main {
+        color: #171c24;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: $main-color;
+        background-image: url('/static/images/main3.png');
+        background-repeat: no-repeat;
+        background-position: bottom center;
+        background-size: contain;
+        @media all and (max-width: 500px) {
+            background-size: cover;
+        }
+    }
+    .adsrun-logo {
+        width: 4.5rem;
+        height: auto;
+    }
+    .main-title {
+        position: absolute;
+        top: 3.75rem;
+        right: 2.375rem;
+        font-size: 2.34rem;
+        font-weight: 100;
+        line-height: 1.36;
+        border-bottom: 1px solid #3d3d3d;
+        padding-bottom: 1.35rem;
+        & > strong {
+            font-weight: normal;
+        }
+    }
+    .ft-logo {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        color: white;
+        font-size: 1.125rem;
+        font-weight: 500;
+        text-align: center;
+        margin: 0;
+        // padding: 1.35rem 0;
+        padding-bottom: 1.875rem;
+    }
+
+    &.progress-fixed {
+        .progress-box {
+            width: 100%;
+            position: fixed;
+            bottom: 4.685rem;
+            left: 0;
+            padding: 0 1rem;
+        }
+    }
+    .progress-box {
+        & > ul {
+            display: flex;
+            background-image: url('/static/images/dotted-bar.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            & > li {
+                flex: 1 1 auto;
+                text-align: center;
+                background-color: #ededed;
+                border-radius: 6px;
+                font-size: 0.75rem;
+                line-height: 1.333em;
+                color: #a3a3a3;
+                padding: 0.825rem 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-right: 1.125rem;
+                &.active {
+                    color: #948330;
+                    background-color: $main-color;
+                }
+                &:last-of-type {
+                    margin-right: 0;
+                    &.active {
+                        color: white;
+                        background-color: #4a4a4a;
+                    }
+                }
+            }
+        }
+    }
+    .result-box {
+        width: 100%;
+        height: 8.875rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 6px;
+        background-color: #eff4f8;
+        border: 1px solid #dcdcdc;
+        &.cumulation {
+            background-color: white;
+            border-color: $border-color;
+            height: 3.06rem;
+            & > span {
+                font-size: 0.7rem;
+                color: $dark;
+            }
+            & > h4 {
+                font-size: 1.1875rem;
+                color: $dark;
+                & > small {
+                    font-size: 0.6875rem;
+                }
+            }
+            &.request {
+                background-color: $main-color;
+                & > span {
+                    border-color: #9d840f;
+                }
+                & > span,
+                & > h4 {
+                    color: #9d840f;
+                }
+            }
+        }
+        & > span {
+            display: inline-block;
+            color: #4b5055;
+            font-size: 0.8125rem;
+            font-weight: normal;
+            padding-right: 0.8125rem;
+            border-right: 1px solid #c4c4c4;
+        }
+        & > h4 {
+            color: $black;
+            font-size: 1.6875rem;
+            padding-left: 0.8125rem;
+            & > small {
+                font-size: 1.04rem;
+            }
+        }
+    }
+
+    .bar-wrap {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        margin-top: 0.75rem;
+        height: 0.75rem;
+        background-color: #ededed;
+        border-radius: 300rem;
+        .bar {
+            border-radius: 300rem;
+            background: linear-gradient(to right,#fddc40,#fae47c);
+            height: 100%;
+            transition: all 0.35s;
+        }
+    }
+}

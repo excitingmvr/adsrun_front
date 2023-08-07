@@ -1,0 +1,77 @@
+.btn {
+    display: inline-block;
+    background-color: #565656;
+    color: white;
+    padding: 0.85rem 1rem;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    border: 0;
+    text-align: center;
+    &.full {
+        width: 100%;
+    }
+    &.colored {
+        background-color: $main-color;
+        color: #A58200;
+        &.black {
+            color: $black;
+        }
+    }
+    &.skyblue {
+        background-color: $skyblue;
+    }
+    &.grey {
+        background-color: #ddded9;
+        color: $black;
+    }
+    &.dark {
+        color: white;
+        background-color: #4a4a4a;
+    }
+    &.no-back {
+        background-color: transparent;
+        color: $black;
+        font-size: 0.8rem;
+        border-bottom: 1px solid $black;
+        border-radius: 0;
+        padding: 0.2rem 0;
+    }
+    &.full.colored {
+        color: $black;
+        font-size: 0.875rem;
+        font-weight: 500;
+    }
+    &.disabled {
+        color: #a3a3a3;
+        background-color: #ededed;
+    }
+}
+
+.mark {
+    display: inline-block;
+    color: white;
+    font-weight: bold;
+    font-size: 0.75rem;
+    padding: 0.3rem 1rem;
+    border-radius: 300rem;
+}
+.slide-btn {
+    width: 60%;
+    position: absolute;
+    top: 3px;
+    left: 4px;
+}
+
+.btns {
+    display: flex;
+    &.dbl {
+        & > .btn {
+            flex: 1 1 auto;
+            font-size: 0.875rem;
+            &:first-of-type {
+                margin-right: 7px;
+                flex: 0 0 50%;
+            }
+        }
+    }
+}

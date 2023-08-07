@@ -1,0 +1,42 @@
+.agreement {
+    .checkbox-label {
+        font-size: 0.9rem;
+        padding-left: 1.625rem;
+        margin-left: 0.25rem;
+    }
+    .checkbox-label::after {
+        background-color: $grey;
+        background-image: url(/images/ico-check.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 0.75rem;
+    }
+    .agree-all {
+        margin-bottom: 0.625rem;
+        border-bottom: 1px solid #e9e9e8;
+        padding-bottom: 0.625rem;
+    }
+    .agreement-section {
+        margin-bottom: 1.5rem;
+    }
+    .agreement-txt {
+        background-color: white;
+        border-radius: 6px;
+        border: 1px solid #ededed;
+        line-height: 1.5;
+        padding: 0.875rem;
+        max-height: 200px;
+        overflow-y: auto;
+        margin-bottom: 0.35rem;
+        & > h4 {
+            margin-bottom: 0.25rem;
+            font-size: 0.9rem;
+        }
+        & > p {
+            white-space: pre-line;
+            color: #5e5e5e;
+            font-size: 0.75rem;
+            font-weight: normal;
+        }
+    }
+}

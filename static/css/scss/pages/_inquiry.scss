@@ -1,0 +1,16 @@
+.ar-wrap {
+    &.inquiry {
+        .input-box {
+            & > input {
+                background-color: #f9f9f9;
+            }
+        }
+        .textarea-box {
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            & > textarea {
+                height: 15.3rem;
+            }
+        }
+    }
+}

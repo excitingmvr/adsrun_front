@@ -1,0 +1,11 @@
+.ar-wrap {
+    &.ad-request {
+        .textarea-box {
+            margin-top: 1.125rem;
+            margin-bottom: 0.5625rem;
+            & > textarea {
+                height: 15rem;
+            }
+        }
+    }
+}

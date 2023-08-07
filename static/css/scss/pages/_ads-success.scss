@@ -1,0 +1,50 @@
+.ar-wrap {
+    &.ads-success {
+        .msg-box {
+            text-align: center;
+            padding: 1rem 0.5rem 1.125rem;
+            border: 1px solid $border-color;
+            border-radius: 6px;
+            margin-bottom: 0.4375rem;
+            & > h3 {
+                color: $skyblue;
+                font-size: 1.09rem;
+                font-weight: bold;
+                margin-bottom: 0.625rem;
+            }
+            & > p {
+                color: $black;
+                font-size: 0.875rem;
+            }
+        }
+        .result-box {
+            flex-direction: column;
+            border: 1px solid #e0c336;
+            background-color: #fddc3f;      
+        }
+        
+        .result-success-box {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            & > span {
+                display: inline-block;
+                color: #4b5055;
+                font-size: 0.8125rem;
+                font-weight: bold;
+                padding-right: 0.8125rem;
+                border-right: 1px solid #e4c118;
+            }
+            & > h4 {
+                color: $black;
+                font-size: 1.04rem;
+                padding-left: 0.8125rem;
+                & > strong {
+                    font-family: 'AritaDotum', 'Noto Sans KR', 'sanserif';
+                    font-size: 1.4875rem;
+                }
+            }
+        }
+    }
+}

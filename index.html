@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta name="robots" content="index,follow"/>
+    <meta name="theme-color" content="#fddc3f">
+    <meta name="description" content="애즈런 - 정체된 시간을 삽니다"/>
+    <meta name="keywords" content="애즈런,광고참여,광고,Adsrun,차량광고"/>
+    <meta name="author" content="애즈런"/>
+    <meta property="og:title" content="애즈런"/>
+    <meta property="og:description" content="정체된 시간을 삽니다.">
+    <meta property="og:site_name" content="애즈런"/>
+    <meta property="og:type" content="website"/>
+    <!-- <meta property="og:url" content=""/> -->
+    <meta property="og:image" content="/static/images/og-image.jpg"/>
+    <title>애즈런</title>
+    <link rel="stylesheet" href="/static/css/style.css"/>
+    <link rel="stylesheet" href="/static/css/dragdealer.css"/>
+    <script src="/static/js/global.js"></script>
+    <script src="/static/js/dragdealer.js"></script>
+    <script src="https://developers.kakao.com/sdk/js/kakao.min.js" language="javascript" type="text/javascript"></script>
+    <script>Kakao.init('6d1fcab3561121917dd95c354e928002');</script>
+    <script type="text/javascript" src="http://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=rn5qrk314m&submodules=geocoder"></script>
+    <script src='https://code.jquery.com/jquery-1.12.4.js'></script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+    <!-- <a href='javascript:onFcmAction("/Ads/632")'>gogo</a> -->
+  </body>
+  <script>
+     //window.localStorage.setItem('isNew', '/Ads/632');
+   
+  function onLoginComplete(email,id,nickname,fcmtoken,snsType,os){
+    //alert("onLoginComplete Call")
+    //alert("email:"+email+ " id:"+ id+ " nickname:"+ nickname+ " fcmtoken:"+ fcmtoken+ " snsType:"+ snsType+' os:'+os)
+   
+    window.postMessage({ id: id, email : email, fcmtoken : fcmtoken, profile : nickname, snsType : snsType, osInfo : os })
+  }  
+
+   function onFcmAction(action){
+    window.localStorage.setItem('isNew', action);
+    console.log('onFcmAction action:'+action);
+    //window.location.href='http://adsrun-front-test.s3-website.ap-northeast-2.amazonaws.com'+action;
+    if(action != null && action != '') {
+      setTimeout(function(){location.href='https://app.adsrun.kr'+action;},250);
+      // setTimeout(function(){location.href='http://adsrun-front-test.s3-website.ap-northeast-2.amazonaws.com'+action;}, 250);
+    }
+  }
+
+  function pop_url(url){
+      console.log('pop)url:'+url);
+
+      if(navigator.userAgent.match(/ADSRUN_APP_IOS/i)){
+          window.webkit.messageHandlers.pop.postMessage(url+"");
+      }else if(navigator.userAgent.match(/ADSRUN_APP_ANDROID/i)){
+          window.adsrunApp.pop(url);
+      }else {
+          window.open(url);
+      }      
+    }
+
+  function onAppVersion(version) {
+    console.log('onAppVersion:'+version);
+    window.postMessage({version : version})
+  }  
+  
+  </script>
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '152982856028044',
+      cookie     : true,
+      xfbml      : true,
+      version    : 'v15.0'
+    });
+      
+    FB.AppEvents.logPageView();   
+      
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+
+   
+</script>
+<!-- Meta Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '613249262877494');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=613249262877494&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+</html>

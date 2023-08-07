@@ -1,0 +1,146 @@
+.input-box {
+    display: flex;
+    margin-bottom: 0.375rem;
+    &.align-center {
+        align-items: center;
+    }
+    & > input {
+        margin-right: 0.375rem;
+        font-size: 0.75rem;
+        padding: 0.6875rem $px15;
+        border: 1px solid $border-color;
+        border-radius: 6px;
+        flex: 1;
+        background-color: white;
+
+        &[type='file'] {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            visibility: hidden;
+        }
+    }
+    .input-file {
+        flex: 1 1 auto;
+        background-color: white;
+        border: 1px solid $border-color;
+        border-radius: 6px;
+        font-size: 0.75rem;
+        padding: 0.6875rem $px15;
+        padding-left:2rem;
+        background-image: url('/static/images/ico-attach.png');
+        background-repeat: no-repeat;
+        background-position: 0.625rem center;
+        background-size: 1.0625rem;
+        & > p {
+            margin: 0;
+        }
+    }
+    .input-label {
+        flex: 0 0 20%;
+        font-size: 0.75rem;
+        color: $dark;
+    }
+    .input-label + input {
+        margin-right: 0;
+    }
+    & > button {
+        flex: 0 0 30%;
+        &.search {
+            background-image: url('/static/images/ico-search.png');
+            background-position: 1.125rem center;
+            background-repeat: no-repeat;
+            background-size: 1rem;
+            padding-left: 2.375rem;
+            flex: 0 0 35%;
+        }
+    }
+    &.full {
+        & > input {
+            flex: 0 0 100%;
+        }
+    }
+}
+.select-box {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    & > select {
+        font-size: 0.75rem;
+        color: $grey;
+        border: 1px solid $border-color;
+        border-radius: 6px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background-image: url('/static/images/ico-down.png');
+        background-repeat: no-repeat;
+        background-position: right 0.625rem center;
+        background-size: 0.625rem;
+        flex: 1 1 auto;
+        margin-bottom: 0.375rem;
+        padding: 0.6875rem .9375rem;
+        background-color: white;
+        &:-ms-expand {
+            display: none;
+        }
+        &:first-of-type {
+            margin-right: 0.3125rem;
+        }
+    }
+    &.full {
+        & > select {
+            flex: 0 0 100%;
+            margin-right: 0;
+        }
+    }
+}
+.ar-check {
+    display: none;
+}
+.checkbox-label {
+    padding-left: 1.875rem;
+    position: relative;
+    &::after {
+        content: '';
+        display: block;
+        width: 1.125rem;
+        height: 1.125rem;
+        border-radius: 50%;
+        background-color: $border-color;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        margin-top: -0.5625rem;
+    }
+}
+.ar-check:checked + .checkbox-label {
+    &::after {
+        background-image: url('/static/images/ico-check.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: $main-color;
+        background-size: 0.75rem;
+    }
+}
+
+.textarea-box {
+    width: 100%;
+    .textarea-label {
+        display: block;
+        width: 100%;
+        font-size: 0.75rem;
+        color: $dark;
+        margin-bottom: 0.875rem;
+    }
+    & > textarea {
+        width: 100%;
+        font-size: 0.75rem;
+        padding: 1rem;
+        border: 1px solid $border-color;
+        border-radius: 6px;
+        resize: none;
+    }
+}

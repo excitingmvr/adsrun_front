@@ -1,0 +1,114 @@
+.ar-wrap {
+    &.home-detail {
+        .home-detail__box {
+            border: 1px solid $border-color;
+            border-radius: 6px;
+            padding: 1rem 1.25rem;
+            margin-bottom: 0.625rem;
+            overflow: hidden;
+            position: relative;
+            .up-btn {
+                width: 1.3rem;
+                height: 1.3rem;
+                position: absolute;
+                background-color: #4a4a4a;
+                background-image: url('/static/images/ico-down-wh-big.png');
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 0.625rem;
+                border-radius: 6px;
+                border: 0;
+                top: $px15;
+                right: 1rem;
+                &.active {
+                    background-image: url('/static/images/ico-up-wh-big.png');
+                }
+            }
+            & > h3 {
+                color: $black;
+                font-size: $px15;
+                font-weight: 500;
+                text-align: center;
+                margin: 0;
+                margin-bottom: $px15;
+            }
+            .home-detail__list {
+                & > li {
+                    padding: 1.1875rem 0 0.625rem 0;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    border-bottom: 1px solid $border-color;
+                    &:last-of-type {
+                        padding-bottom: 2px;
+                        border-bottom: 0;
+                    }
+                    &.select-li {
+                        padding-top: 0.44rem;
+                        padding-bottom: 0.44rem;
+                    }
+                    &.alert {
+                        width: 100%;
+                        color: #7d7d7d;
+                        text-align: center;
+                        font-size: 0.75rem;
+                        display: block;
+                    }
+                    & > p {
+                        margin: 0;
+                        font-size: 0.75rem;
+                        font-weight: 500;
+                        & > strong {
+                            color: $blue;
+                        }
+                        &:first-of-type {
+                            color: $grey;
+                        }
+                        &:last-of-type {
+                            color: $dark;
+                        }
+                    }
+                    .select-box {
+                        flex: 0 0 50%;
+                        & > select {
+                            margin: 0;
+                            padding: 0.44rem 0.6875rem; 
+                        }
+                    }
+                }
+            }
+        }
+        .home-detail__img {
+            width: 100%;
+            border: 1px solid $border-color;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+            & > img {
+                width: 100%;
+            }
+        }
+        .home-detail__slide {
+            width: 100%;
+            height: 2.875rem;
+            border-radius: 300rem;
+            background-color: #4a4a4a;
+            position: relative;
+            padding: 0.1875rem;
+            .slide-bar {
+                width: 60%;
+                height: 2.5rem;
+                border-radius: 300rem;
+                border: 0;
+                padding-right: 1.875rem;
+                font-size: 0.875rem;
+                font-weight: 500;
+                color: #a28e2e;
+                background-image: url('/static/images/ico-right-dbl.png');
+                background-repeat: no-repeat;
+                background-position: right 1.75rem center;
+                background-color: $main-color;
+                background-size: 1.0625rem;
+            }
+        }
+    }
+}

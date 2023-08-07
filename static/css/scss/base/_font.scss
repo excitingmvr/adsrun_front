@@ -1,0 +1,70 @@
+@import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
+@font-face {
+    font-family: 'AritaDotum';
+    font-style: normal;
+    font-weight: 100;
+    src: local('※'),
+        url('/static/font/AritaDotumThin.woff2') format('woff2'), 
+        url('/static/font/AritaDotumThin.woff') format('woff'),
+        url('/static/font/AritaDotumThin.ttf') format('truetype'),
+        url('/static/font/AritaDotumThin.otf') format('opentype'),
+        url('/static/font/AritaDotumThin.eot') format('embedded-opentype');
+}
+
+@font-face {
+    font-family: 'AritaDotum';
+    font-style: normal;
+    font-weight: 400;
+    src: local('※'),
+        url('/static/font/AritaDotumMedium.woff2') format('woff2'), 
+        url('/static/font/AritaDotumMedium.woff') format('woff'),
+        url('/static/font/AritaDotumMedium.ttf') format('truetype'),
+        url('/static/font/AritaDotumMedium.otf') format('opentype'),
+        url('/static/font/AritaDotumMedium.eot') format('embedded-opentype');
+}
+
+@font-face {
+    font-family: 'AritaDotum';
+    font-style: normal;
+    font-weight: 700;
+    src: local('※'),
+        url('/static/font/AritaDotumSemiBold.woff2') format('woff2'), 
+        url('/static/font/AritaDotumSemiBold.woff') format('woff'),
+        url('/static/font/AritaDotumSemiBold.ttf') format('truetype'),
+        url('/static/font/AritaDotumSemiBold.otf') format('opentype'),
+        url('/static/font/AritaDotumSemiBold.eot') format('embedded-opentype');
+}
+
+@font-face {
+    font-family: 'AritaDotum';
+    font-style: normal;
+    font-weight: 900;
+    src: local('※'),
+        url('/static/font/AritaDotumBold.woff2') format('woff2'), 
+        url('/static/font/AritaDotumBold.woff') format('woff'),
+        url('/static/font/AritaDotumBold.ttf') format('truetype'),
+        url('/static/font/AritaDotumBold.otf') format('opentype'),
+        url('/static/font/AritaDotumBold.eot') format('embedded-opentype');
+}
+html,body {
+    width: 100%;
+    font-size: 16px;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: $dark;
+    letter-spacing: -0.025em;
+    line-height: 1;
+    @media screen and (min-width: 600px) {
+        font-size: 18.5px;
+    }
+    @media screen and (min-width: 1024px) {
+        font-size: 22.5px;
+    }
+}
+::-webkit-input-placeholder,
+:-ms-input-placeholder,
+::placeholder {
+    color: $grey;
+}
+.txt-hidden {
+    text-indent: -9999px;
+}
